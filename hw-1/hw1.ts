@@ -1,7 +1,7 @@
 class School {
   directions: any = [];
 
-  addDirection(direction: string) {
+  addDirection(direction: string): void {
     this.directions.push(direction);
   }
 }
@@ -10,7 +10,7 @@ class Direction {
   levels: any = [];
   _name: string;
 
-  get name() {
+  get name(): string {
     return this._name;
   }
 
@@ -18,7 +18,7 @@ class Direction {
     this._name = name;
   }
 
-  addLevel(level: number | string) {
+  addLevel(level: number | string): void {
     this.levels.push(level);
   }
 }
@@ -41,7 +41,7 @@ class Level {
     return this._program;
   }
 
-  addGroup(group: string | number) {
+  addGroup(group: string | number): void {
     this.groups.push(group);
   }
 }
@@ -51,7 +51,7 @@ class Group {
   directionName: string;
   levelName: string;
 
-  get students() {
+  get students(): any {
     return this._students;
   }
 
@@ -86,7 +86,7 @@ class Student {
     this.birthYear = birthYear;
   }
 
-  get fullName() {
+  get fullName(): string {
     return `${this.lastName} ${this.firstName}`;
   }
 
